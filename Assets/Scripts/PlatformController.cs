@@ -63,7 +63,6 @@ public class PlatformController : MonoBehaviour {
 		}
 	}
 
-
 	void Flip()
 	{
 		facingRight = !facingRight;
