@@ -51,11 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameController.cs" />
-     <Compile Include="Assets\PauseButton.cs" />
+     <Compile Include="Assets\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\EnemyOnStepped.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Gliding.cs" />
      <Compile Include="Assets\Scripts\Ladder.cs" />
      <Compile Include="Assets\Scripts\NellePush.cs" />
+     <Compile Include="Assets\Scripts\PauseButton.cs" />
      <Compile Include="Assets\Scripts\PlatformController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
  <Reference Include="UnityEngine.UI">

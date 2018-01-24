@@ -2,9 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Gliding.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="19" Column="2" />
-      <File FileName="Assets/Scripts/PlatformController.cs" Line="3" Column="19" />
-      <File FileName="Assets/Scripts/Gliding.cs" Line="20" Column="36" />
+      <File FileName="Assets/Scripts/EnemyOnStepped.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlatformController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Gliding.cs" Line="28" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
