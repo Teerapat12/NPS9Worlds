@@ -31,7 +31,6 @@ public class GameController : MonoBehaviour {
 			pauseUI.text = "";
 
 			paused = false;
-
 		}
 	}
 
