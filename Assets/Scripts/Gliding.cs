@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Gliding : MonoBehaviour {
 
@@ -19,7 +20,7 @@ public class Gliding : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//If jumping and falling and holding jump
-		if(!controller.isGrounded() && rb2d.velocity.y<0 && Input.GetButton("Jump")){
+		if(!controller.isGrounded() && rb2d.velocity.y<0 && (Input.GetButton("Jump")||CrossPlatformInputManager.GetButton("Jump"))){
 			//Gliding			
 			anim.SetTrigger("Glide");
 			rb2d.gravityScale = 0.05f;

@@ -18,14 +18,14 @@ public class Ladder : MonoBehaviour {
 
 
 	void OnTriggerStay2D(Collider2D other){
-		if(other.tag=="Poro" &&Input.GetKey(KeyCode.W)){
+		if(other.tag=="Nelle" &&Input.GetKey(KeyCode.W)){
 			Debug.Log("going up");
 			other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
 		}
-		else if(other.tag=="Poro" &&Input.GetKey(KeyCode.S)){
+		else if(other.tag=="Nelle" &&Input.GetKey(KeyCode.S)){
 			other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
 		}
-		else if(other.tag=="Poro")
+		else if(other.tag=="Nelle")
 			other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 	}
 }

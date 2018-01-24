@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
 
@@ -9,8 +10,8 @@ public class PlayerController : MonoBehaviour {
 	private float cdFintimeStamp;
 
 	public GameObject[] characters;
-	public Camera mainCamera;
-	public int coolDownInSec = 2;
+	public Camera mainCamera;	
+	public float coolDownInSec = 0.00f;
 
 
 	//TODO: Follow the player functionality
@@ -25,26 +26,105 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
 		if(Input.GetButtonDown("Switch")){
 			SwitchCharacter();
 		}
+		if (CrossPlatformInputManager.GetButtonDown ("SwitchNelle")) {
+			SwitchCharacter (0);
+		} else if (CrossPlatformInputManager.GetButtonDown ("SwitchPoro")) {
+			SwitchCharacter (1);
+		} else if (CrossPlatformInputManager.GetButtonDown ("SwitchSlow")) {
+			SwitchCharacter (2);
+		} 
+
 	}
 
 	void SwitchCharacter(){
-			if(cdFintimeStamp<= Time.time){
-				characters[currentPlayer].GetComponent<PlatformController>().setInactive();
+		if (cdFintimeStamp <= Time.time) {
+			characters [currentPlayer].GetComponent<PlatformController> ().setInactive ();
 
-				currentPlayer+=1;
-				//Implement switching delay (maybe 2 seconds)
-				if(currentPlayer>=numberOfCharacter){
-					currentPlayer = 0;
-				}
-
-				characters[currentPlayer].GetComponent<PlatformController>().setActive();
-				//Change parent and reset local position
-				mainCamera.transform.SetParent(characters[currentPlayer].transform);
-				mainCamera.transform.localPosition = new Vector3(0,0,-10f);
-				cdFintimeStamp = Time.time + coolDownInSec;
+			currentPlayer += 1;
+			//Implement switching delay (maybe 2 seconds)
+			if (currentPlayer >= numberOfCharacter) {
+				currentPlayer = 0;
 			}
+
+			characters [currentPlayer].GetComponent<PlatformController> ().setActive ();
+			//Change parent and reset local position
+			mainCamera.transform.SetParent (characters [currentPlayer].transform);
+			mainCamera.transform.localPosition = new Vector3 (0, 0, -10f);
+			cdFintimeStamp = Time.time + coolDownInSec;
+		} else
+			Debug.Log ("Cool down");
 	}
+
+	void SwitchCharacter(int i){
+		Debug.Log (i);
+		if(cdFintimeStamp<= Time.time){
+			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
+
+			currentPlayer = i;
+
+			characters[currentPlayer].GetComponent<PlatformController>().setActive();
+			//Change parent and reset local position
+			mainCamera.transform.SetParent(characters[currentPlayer].transform);
+			mainCamera.transform.localPosition = new Vector3(0,0,-10f);
+			cdFintimeStamp = Time.time + coolDownInSec;
+		}
+		else
+			Debug.Log (cdFintimeStamp-Time.time);
+	}
+
+	//Seperate into three function incase we want some specific feature for each character.
+
+	public void SwitchToNelle(){
+		if(cdFintimeStamp<= Time.time){
+			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
+
+			currentPlayer = 0;
+
+			characters[currentPlayer].GetComponent<PlatformController>().setActive();
+			//Change parent and reset local position
+			mainCamera.transform.SetParent(characters[currentPlayer].transform);
+			mainCamera.transform.localPosition = new Vector3(0,0,-10f);
+			cdFintimeStamp = Time.time + coolDownInSec;
+		}
+		else
+			Debug.Log (cdFintimeStamp-Time.time);
+	}
+
+	public void SwitchToPoro(){
+		if(cdFintimeStamp<= Time.time){
+			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
+
+			currentPlayer = 1;
+
+			characters[currentPlayer].GetComponent<PlatformController>().setActive();
+			//Change parent and reset local position
+			mainCamera.transform.SetParent(characters[currentPlayer].transform);
+			mainCamera.transform.localPosition = new Vector3(0,0,-10f);
+			cdFintimeStamp = Time.time + coolDownInSec;
+		}
+		else
+			Debug.Log (cdFintimeStamp-Time.time);
+	}
+
+	public void SwitchToSlow(){
+		if(cdFintimeStamp<= Time.time){
+			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
+
+			currentPlayer = 2;
+
+			characters[currentPlayer].GetComponent<PlatformController>().setActive();
+			//Change parent and reset local position
+			mainCamera.transform.SetParent(characters[currentPlayer].transform);
+			mainCamera.transform.localPosition = new Vector3(0,0,-10f);
+			cdFintimeStamp = Time.time + coolDownInSec;
+		}
+		else
+			Debug.Log (cdFintimeStamp-Time.time);
+	}
+
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlatformController : MonoBehaviour {
 
@@ -28,19 +29,37 @@ public class PlatformController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+
+		#if UNITY_STANDALONE || UNITY_WEBPLAYER
 
 		if (Input.GetButtonDown("Jump") && grounded && isCurrentCharacter)
 		{
 			jump = true;
 		}
+		#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+
+		if (CrossPlatformInputManager.GetButtonDown("Jump") && grounded && isCurrentCharacter)
+		{
+			jump = true;
+		}
+
+		#endif
 	}
 
 	void FixedUpdate()
 	{
 		if(isCurrentCharacter){
 
+			#if UNITY_STANDALONE || UNITY_WEBPLAYER
 			float h = Input.GetAxis("Horizontal");
+			#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+			float h = CrossPlatformInputManager.GetAxis("Horizontal");
+
+			#endif
+
+
 			anim.SetFloat("Speed", Mathf.Abs(h));
 
 			if (h * rb2d.velocity.x < maxSpeed)
