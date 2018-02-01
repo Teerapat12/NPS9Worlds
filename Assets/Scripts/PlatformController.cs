@@ -35,7 +35,6 @@ public class PlatformController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
 		#if UNITY_STANDALONE || UNITY_WEBPLAYER
