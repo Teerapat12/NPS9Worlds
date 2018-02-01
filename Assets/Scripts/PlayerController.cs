@@ -2,16 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
 	private int currentPlayer = 0;
 	private int numberOfCharacter = 3;
 	private float cdFintimeStamp;
+	private Camera mainCamera;	
 
 	public GameObject[] characters;
-	public Camera mainCamera;	
 	public float coolDownInSec = 0.00f;
+
+	public Sprite NelleActiveIcon;
+	public Sprite NelleInactiveIcon;
+
+	public Sprite PoroActiveIcon;
+	public Sprite PoroInactiveIcon;
+
+	public Sprite SlowActiveIcon;
+	public Sprite SlowInactiveIcon;
+
+	private GameObject NelleIconRenderer, PoroIconRenderer, SlowIconRenderer;
 
 
 	//TODO: Follow the player functionality
@@ -22,42 +34,18 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		characters[0].GetComponent<PlatformController>().setActive();
 		cdFintimeStamp = Time.time;
+		NelleIconRenderer = GameObject.Find ("NelleButton");
+		PoroIconRenderer = GameObject.Find ("PoroButton");
+		SlowIconRenderer = GameObject.Find ("SlowButton");
+
+		mainCamera = Camera.main;
+
+		SwitchCharacter (currentPlayer);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-
-		if(Input.GetButtonDown("Switch")){
-			SwitchCharacter();
-		}
-		if (CrossPlatformInputManager.GetButtonDown ("SwitchNelle")) {
-			SwitchCharacter (0);
-		} else if (CrossPlatformInputManager.GetButtonDown ("SwitchPoro")) {
-			SwitchCharacter (1);
-		} else if (CrossPlatformInputManager.GetButtonDown ("SwitchSlow")) {
-			SwitchCharacter (2);
-		} 
-
-	}
-
-	void SwitchCharacter(){
-		if (cdFintimeStamp <= Time.time) {
-			characters [currentPlayer].GetComponent<PlatformController> ().setInactive ();
-
-			currentPlayer += 1;
-			//Implement switching delay (maybe 2 seconds)
-			if (currentPlayer >= numberOfCharacter) {
-				currentPlayer = 0;
-			}
-
-			characters [currentPlayer].GetComponent<PlatformController> ().setActive ();
-			//Change parent and reset local position
-			mainCamera.transform.SetParent (characters [currentPlayer].transform);
-			mainCamera.transform.localPosition = new Vector3 (0, 0, -10f);
-			cdFintimeStamp = Time.time + coolDownInSec;
-		} else
-			Debug.Log ("Cool down");
 	}
 
 	void SwitchCharacter(int i){
@@ -68,9 +56,11 @@ public class PlayerController : MonoBehaviour {
 			currentPlayer = i;
 
 			characters[currentPlayer].GetComponent<PlatformController>().setActive();
-			//Change parent and reset local position
-			mainCamera.transform.SetParent(characters[currentPlayer].transform);
-			mainCamera.transform.localPosition = new Vector3(0,0,-10f);
+			//Change camera target
+			mainCamera.GetComponent<StrictCameraToScene>().target = characters[i].transform;
+
+			setActiveIcon (i);
+
 			cdFintimeStamp = Time.time + coolDownInSec;
 		}
 		else
@@ -80,51 +70,33 @@ public class PlayerController : MonoBehaviour {
 	//Seperate into three function incase we want some specific feature for each character.
 
 	public void SwitchToNelle(){
-		if(cdFintimeStamp<= Time.time){
-			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
-
-			currentPlayer = 0;
-
-			characters[currentPlayer].GetComponent<PlatformController>().setActive();
-			//Change parent and reset local position
-			mainCamera.transform.SetParent(characters[currentPlayer].transform);
-			mainCamera.transform.localPosition = new Vector3(0,0,-10f);
-			cdFintimeStamp = Time.time + coolDownInSec;
-		}
-		else
-			Debug.Log (cdFintimeStamp-Time.time);
+		SwitchCharacter (0);
 	}
 
 	public void SwitchToPoro(){
-		if(cdFintimeStamp<= Time.time){
-			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
-
-			currentPlayer = 1;
-
-			characters[currentPlayer].GetComponent<PlatformController>().setActive();
-			//Change parent and reset local position
-			mainCamera.transform.SetParent(characters[currentPlayer].transform);
-			mainCamera.transform.localPosition = new Vector3(0,0,-10f);
-			cdFintimeStamp = Time.time + coolDownInSec;
-		}
-		else
-			Debug.Log (cdFintimeStamp-Time.time);
+		SwitchCharacter (1);
 	}
 
 	public void SwitchToSlow(){
-		if(cdFintimeStamp<= Time.time){
-			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
+		SwitchCharacter (2);
+	}
 
-			currentPlayer = 2;
-
-			characters[currentPlayer].GetComponent<PlatformController>().setActive();
-			//Change parent and reset local position
-			mainCamera.transform.SetParent(characters[currentPlayer].transform);
-			mainCamera.transform.localPosition = new Vector3(0,0,-10f);
-			cdFintimeStamp = Time.time + coolDownInSec;
+	public void setActiveIcon(int character){
+		if (character == 0) {
+			if(NelleIconRenderer!=null) NelleIconRenderer.GetComponent<Image> ().sprite = NelleActiveIcon;
+			if(PoroIconRenderer!=null) PoroIconRenderer.GetComponent<Image> ().sprite = PoroInactiveIcon;
+			if(SlowIconRenderer!=null) SlowIconRenderer.GetComponent<Image> ().sprite = SlowInactiveIcon;
 		}
-		else
-			Debug.Log (cdFintimeStamp-Time.time);
+		if (character == 1) {
+			if(NelleIconRenderer!=null) NelleIconRenderer.GetComponent<Image> ().sprite = NelleInactiveIcon;
+			if(NelleIconRenderer!=null) PoroIconRenderer.GetComponent<Image> ().sprite = PoroActiveIcon;
+			if(NelleIconRenderer!=null) SlowIconRenderer.GetComponent<Image> ().sprite = SlowInactiveIcon;
+		}
+		if (character == 2) {
+			if(NelleIconRenderer!=null) NelleIconRenderer.GetComponent<Image> ().sprite = NelleInactiveIcon;
+			if(NelleIconRenderer!=null) PoroIconRenderer.GetComponent<Image> ().sprite = PoroInactiveIcon;
+			if(NelleIconRenderer!=null) SlowIconRenderer.GetComponent<Image> ().sprite = SlowActiveIcon;
+		}
 	}
 
 }

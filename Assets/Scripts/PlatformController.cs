@@ -18,12 +18,18 @@ public class PlatformController : MonoBehaviour {
 	private Animator anim;
 	private Rigidbody2D rb2d;
 
+	//AudioClips.
+	private AudioSource audioSource;
+	private AudioSource cameraSource;
+	public AudioClip jumpSound;
 
 	// Use this for initialization
 	void Awake () 
 	{
 		anim = GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D>();
+		audioSource = GetComponent<AudioSource> ();
+		cameraSource = Camera.main.GetComponent<AudioSource> ();
 	}
 
 	// Update is called once per frame
@@ -48,6 +54,14 @@ public class PlatformController : MonoBehaviour {
 		#endif
 	}
 
+	public void walkingSound(float speed){
+		if (Mathf.Abs (speed) > 0.001) {
+			if (!audioSource.isPlaying)
+				audioSource.Play ();
+		} else 
+			audioSource.Stop ();
+	}
+
 	void FixedUpdate()
 	{
 		if(isCurrentCharacter){
@@ -59,8 +73,12 @@ public class PlatformController : MonoBehaviour {
 
 			#endif
 
+			walkingSound (h);
+
 
 			anim.SetFloat("Speed", Mathf.Abs(h));
+
+
 
 			if (h * rb2d.velocity.x < maxSpeed)
 				rb2d.AddForce(Vector2.right * h * moveForce);
@@ -77,6 +95,9 @@ public class PlatformController : MonoBehaviour {
 			{
 				anim.SetTrigger("Jump");
 				rb2d.AddForce(new Vector2(0f, jumpForce));
+
+				// Add jump sound
+				cameraSource.PlayOneShot(jumpSound);
 				jump = false;
 			}
 		}
@@ -100,6 +121,10 @@ public class PlatformController : MonoBehaviour {
 
 	public bool isGrounded(){
 		return grounded;
+	}
+
+	public void hurt(){
+		Debug.Log ("Damaged!!");
 	}
 
 
