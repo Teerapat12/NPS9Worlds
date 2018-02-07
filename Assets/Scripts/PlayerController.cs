@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-	private int currentPlayer = 0;
-	private int numberOfCharacter = 3;
+	public int currentPlayer = 0;
 	private float cdFintimeStamp;
 	private Camera mainCamera;	
 

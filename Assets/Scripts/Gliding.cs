@@ -22,7 +22,7 @@ public class Gliding : MonoBehaviour {
 		//If jumping and falling and holding jump
 		if(!controller.isGrounded() && rb2d.velocity.y<0 && (Input.GetButton("Jump")||CrossPlatformInputManager.GetButton("Jump"))){
 			//Gliding			
-			anim.SetTrigger("Glide");
+//			anim.SetTrigger("Glide");
 			rb2d.gravityScale = 0.05f;
 		}
 		else if(rb2d.gravityScale!=1f){

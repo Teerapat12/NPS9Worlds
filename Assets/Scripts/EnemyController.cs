@@ -10,9 +10,12 @@ public class EnemyController : MonoBehaviour {
 	public AudioClip onDamageEnemySound;
 	private AudioSource audioSource;
 
+	private GameController gameController;
+
 	// Use this for initialization
 	void Start () {
 		audioSource = Camera.main.GetComponent<AudioSource> ();
+		gameController = GameObject.Find ("GameController").GetComponent<GameController> ();
 	}
 	
 	// Update is called once per frame
@@ -33,7 +36,7 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	public void Die(){
-		
+		gameController.passObjective ();
 		Destroy(gameObject);
 	}
 }
