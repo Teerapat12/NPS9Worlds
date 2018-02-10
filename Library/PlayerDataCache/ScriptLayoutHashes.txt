@@ -4,6 +4,7 @@ Assets/Scenes/Scene1.unity
 Assets/Scenes/Scene2.unity
 Assets/Scenes/Scene3.unity
 Assets/Scenes/Scene4.unity
+Assets/Scenes/Scene5.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -161,3 +162,5 @@ a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 b4af9d2671499b17b05e8cbabe7643ce Assembly-CSharp.dll:.NellePush
 92f30d08528c718780ce63c7955f825a Assembly-CSharp.dll:.InvisibleCheckPoint
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EndGamePortal
+26e1d7e84794cc16c75161f60788e6b3 Assembly-CSharp.dll:.DoorGroundSwitch
+f4455ea5553b6ae1ee61c918d7abbc08 Assembly-CSharp.dll:.DoorController

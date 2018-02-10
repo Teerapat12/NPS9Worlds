@@ -19,7 +19,6 @@ public class DoorController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (isClosing);
 		if (isClosing) {
 			//Check if door bottom position is at doorMinPos or not.
 			if (this.transform.position.y - (this.transform.localScale.y / 2) <= doorMinPosObj.transform.position.y) {

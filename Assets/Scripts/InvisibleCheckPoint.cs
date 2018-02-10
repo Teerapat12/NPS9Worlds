@@ -19,7 +19,7 @@ public class InvisibleCheckPoint : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.tag == checkingTagName && !hasPass) {
+		if ((other.gameObject.tag == "Nelle" ||other.gameObject.tag == "Poro" ||other.gameObject.tag == "Slow" ) && !hasPass) {
 			hasPass = true;
 			gameController.passObjective ();
 		}

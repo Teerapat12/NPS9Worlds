@@ -52,9 +52,16 @@ public class PlayerController : MonoBehaviour {
 		if(cdFintimeStamp<= Time.time){
 			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
 
+			//Swap currentCharacter position with newCharacter position.
+			Vector3 currentCharacterPosition = characters [currentPlayer].transform.position;
+			characters [currentPlayer].transform.position = characters [i].transform.position;
+			characters [i].transform.position = currentCharacterPosition;
+
 			currentPlayer = i;
 
 			characters[currentPlayer].GetComponent<PlatformController>().setActive();
+
+
 			//Change camera target
 			mainCamera.GetComponent<StrictCameraToScene>().target = characters[i].transform;
 
