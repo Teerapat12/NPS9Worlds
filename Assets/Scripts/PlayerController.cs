@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 	public Sprite SlowActiveIcon;
 	public Sprite SlowInactiveIcon;
 
-	private GameObject NelleIconRenderer, PoroIconRenderer, SlowIconRenderer;
+	private GameObject NalleIconRenderer, PoroIconRenderer, SlowIconRenderer;
 
 
 	//TODO: Follow the player functionality
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		characters[0].GetComponent<PlatformController>().setActive();
 		cdFintimeStamp = Time.time;
-		NelleIconRenderer = GameObject.Find ("NelleButton");
+		NalleIconRenderer = GameObject.Find ("NalleButton");
 		PoroIconRenderer = GameObject.Find ("PoroButton");
 		SlowIconRenderer = GameObject.Find ("SlowButton");
 
@@ -89,19 +89,19 @@ public class PlayerController : MonoBehaviour {
 
 	public void setActiveIcon(int character){
 		if (character == 0) {
-			if(NelleIconRenderer!=null) NelleIconRenderer.GetComponent<Image> ().sprite = NelleActiveIcon;
+			if(NalleIconRenderer!=null) NalleIconRenderer.GetComponent<Image> ().sprite = NelleActiveIcon;
 			if(PoroIconRenderer!=null) PoroIconRenderer.GetComponent<Image> ().sprite = PoroInactiveIcon;
 			if(SlowIconRenderer!=null) SlowIconRenderer.GetComponent<Image> ().sprite = SlowInactiveIcon;
 		}
 		if (character == 1) {
-			if(NelleIconRenderer!=null) NelleIconRenderer.GetComponent<Image> ().sprite = NelleInactiveIcon;
-			if(NelleIconRenderer!=null) PoroIconRenderer.GetComponent<Image> ().sprite = PoroActiveIcon;
-			if(NelleIconRenderer!=null) SlowIconRenderer.GetComponent<Image> ().sprite = SlowInactiveIcon;
+			if(NalleIconRenderer!=null) NalleIconRenderer.GetComponent<Image> ().sprite = NelleInactiveIcon;
+			if(PoroIconRenderer!=null) PoroIconRenderer.GetComponent<Image> ().sprite = PoroActiveIcon;
+			if(SlowIconRenderer!=null) SlowIconRenderer.GetComponent<Image> ().sprite = SlowInactiveIcon;
 		}
 		if (character == 2) {
-			if(NelleIconRenderer!=null) NelleIconRenderer.GetComponent<Image> ().sprite = NelleInactiveIcon;
-			if(NelleIconRenderer!=null) PoroIconRenderer.GetComponent<Image> ().sprite = PoroInactiveIcon;
-			if(NelleIconRenderer!=null) SlowIconRenderer.GetComponent<Image> ().sprite = SlowActiveIcon;
+			if(NalleIconRenderer!=null) NalleIconRenderer.GetComponent<Image> ().sprite = NelleInactiveIcon;
+			if(PoroIconRenderer!=null) PoroIconRenderer.GetComponent<Image> ().sprite = PoroInactiveIcon;
+			if(SlowIconRenderer!=null) SlowIconRenderer.GetComponent<Image> ().sprite = SlowActiveIcon;
 		}
 	}
 

@@ -159,8 +159,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Gliding
 582c0ce989c2d038337a788408e21a6d Assembly-CSharp.dll:.EnemyOnStepped
-b4af9d2671499b17b05e8cbabe7643ce Assembly-CSharp.dll:.NellePush
-92f30d08528c718780ce63c7955f825a Assembly-CSharp.dll:.InvisibleCheckPoint
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InvisibleCheckPoint
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EndGamePortal
 26e1d7e84794cc16c75161f60788e6b3 Assembly-CSharp.dll:.DoorGroundSwitch
-f4455ea5553b6ae1ee61c918d7abbc08 Assembly-CSharp.dll:.DoorController
+d65aa7003f8909e75eab024de95bd44e Assembly-CSharp.dll:.DoorController
+b4af9d2671499b17b05e8cbabe7643ce Assembly-CSharp.dll:.NallePush

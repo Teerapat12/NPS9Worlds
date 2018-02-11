@@ -16,6 +16,7 @@ TagManager:
   - Poro
   - Nelle
   - Slow
+  - Nalle
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Pickups
   - Ground
   - Ladder
-  - Nelle
+  - Nalle
   - Poro
   - Slow
   - 

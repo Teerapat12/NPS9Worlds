@@ -16,7 +16,7 @@ public class EndGamePortal : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log (other.gameObject.tag);
-		if(other.gameObject.tag=="Nelle"||other.gameObject.tag=="Poro"||other.gameObject.tag=="Slow")
+		if(other.gameObject.tag=="Nalle"||other.gameObject.tag=="Poro"||other.gameObject.tag=="Slow")
 			GameObject.Find ("GameController").GetComponent<GameController> ().goToNextStage ();
 	}
 }

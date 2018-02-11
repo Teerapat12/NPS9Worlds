@@ -22,7 +22,7 @@ public class EnemyOnStepped : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll){
 		//Check if character
-		if (coll.gameObject.tag == "Nelle" || coll.gameObject.tag=="Poro" || coll.gameObject.tag=="Slow")
+		if (coll.gameObject.tag == "Nalle" || coll.gameObject.tag=="Poro" || coll.gameObject.tag=="Slow")
 			//Add force to character upward a bit to hsve a mario like effect.
 			coll.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, bounceForce));
 			//Play onSteppedSound on AudioSource on camera. (So that we dont have to worry about htis object being delete)

@@ -23,7 +23,7 @@ public class DoorGroundSwitch : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.tag == "Nelle"||other.gameObject.tag == "Poro"||other.gameObject.tag == "Slow") {
+		if (other.gameObject.tag == "Nalle"||other.gameObject.tag == "Poro"||other.gameObject.tag == "Slow") {
 			Debug.Log ("Open the door");
 			spriteRenderer.sprite = switchPressed;
 			doorController.openDoor();
@@ -31,7 +31,7 @@ public class DoorGroundSwitch : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D other){
-		if (other.gameObject.tag == "Nelle"||other.gameObject.tag == "Poro"||other.gameObject.tag == "Slow") {
+		if (other.gameObject.tag == "Nalle"||other.gameObject.tag == "Poro"||other.gameObject.tag == "Slow") {
 			Debug.Log ("Close the door");
 			spriteRenderer.sprite = switchNotPressed;
 			doorController.closeDoor();

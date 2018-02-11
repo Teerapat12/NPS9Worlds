@@ -5,7 +5,6 @@ using UnityEngine;
 public class InvisibleCheckPoint : MonoBehaviour {
 
 	private bool hasPass = false;
-	public string checkingTagName = "Nelle"; 
 	private GameController gameController;
 
 	// Use this for initialization
@@ -19,7 +18,7 @@ public class InvisibleCheckPoint : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if ((other.gameObject.tag == "Nelle" ||other.gameObject.tag == "Poro" ||other.gameObject.tag == "Slow" ) && !hasPass) {
+		if ((other.gameObject.tag == "Nalle" ||other.gameObject.tag == "Poro" ||other.gameObject.tag == "Slow" ) && !hasPass) {
 			hasPass = true;
 			gameController.passObjective ();
 		}

@@ -60,7 +60,7 @@
      <Compile Include="Assets\Scripts\Gliding.cs" />
      <Compile Include="Assets\Scripts\InvisibleCheckPoint.cs" />
      <Compile Include="Assets\Scripts\Ladder.cs" />
-     <Compile Include="Assets\Scripts\NellePush.cs" />
+     <Compile Include="Assets\Scripts\NallePush.cs" />
      <Compile Include="Assets\Scripts\PauseButton.cs" />
      <Compile Include="Assets\Scripts\PlatformController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
