@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50159666541708012}
   - component: {fileID: 61992119046028970}
   - component: {fileID: 114602804657932688}
+  - component: {fileID: 114693697498649958}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -55,8 +56,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1717615441792760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.6, y: 1.5, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: 31.06, y: 2.59, z: 0}
+  m_LocalScale: {x: -0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 4896984116692960}
   m_Father: {fileID: 0}
@@ -182,6 +183,21 @@ MonoBehaviour:
   pushPowerX: 10000
   pushPowerY: 500
   onDamageEnemySound: {fileID: 8300000, guid: 8e8218f6a01e74bd5894788e3f912635, type: 3}
+--- !u!114 &114693697498649958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717615441792760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e8c67360aea485b85cb8ba82869ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.02
+  Direction: -1
+  fMinX: -2
+  fMaxX: 2
 --- !u!212 &212675640744312074
 SpriteRenderer:
   m_ObjectHideFlags: 1

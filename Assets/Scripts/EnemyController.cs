@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.tag == "Nelle" || coll.gameObject.tag == "Poro" || coll.gameObject.tag == "Slow") {
+		if (coll.gameObject.tag == "Nalle" || coll.gameObject.tag == "Poro" || coll.gameObject.tag == "Slow") {
 			audioSource.PlayOneShot (onDamageEnemySound);
 			//Call that character gameObject.hurt()
 			coll.gameObject.GetComponent<PlatformController>().hurt();

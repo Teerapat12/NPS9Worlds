@@ -32,12 +32,16 @@ public class PlatformController : MonoBehaviour {
 		cameraSource = Camera.main.GetComponent<AudioSource> ();
 	}
 
+	public void secondJump(){
+		jump = true;
+	}
+
 	// Update is called once per frame
 	void Update () 
 	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-		#if UNITY_STANDALONE || UNITY_WEBPLAYER
+		#if UNITY_STANDALONE || UNITY_WEBPLAYER //|| UNITY_ANDROID //Comment here
 
 		if (Input.GetButtonDown("Jump") && grounded && isCurrentCharacter)
 		{
@@ -65,7 +69,7 @@ public class PlatformController : MonoBehaviour {
 	{
 		if(isCurrentCharacter){
 
-			#if UNITY_STANDALONE || UNITY_WEBPLAYER
+			#if UNITY_STANDALONE || UNITY_WEBPLAYER //|| UNITY_ANDROID //Comment here
 			float h = Input.GetAxis("Horizontal");
 			#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
 			float h = CrossPlatformInputManager.GetAxis("Horizontal");

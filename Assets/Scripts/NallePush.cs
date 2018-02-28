@@ -29,7 +29,7 @@ public class NallePush : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D coll){
 		if (coll.gameObject.tag == "Nalle" && thisRigidbody2D.mass!=whilePushMass) {
-			Debug.Log ("Nalle is pushing!!!");
+//			Debug.Log ("Nalle is pushing!!!");
 			thisRigidbody2D.mass = whilePushMass;
 			if(!audio.isPlaying)
 				audio.Play();
@@ -40,7 +40,7 @@ public class NallePush : MonoBehaviour {
 		if (coll.gameObject.tag == "Nalle") {
 			thisRigidbody2D.mass = beforePushMass;
 			audio.Stop ();
-			Debug.Log ("Nalle stop pushing");
+//			Debug.Log ("Nalle stop pushing");
 		}
 	}
 

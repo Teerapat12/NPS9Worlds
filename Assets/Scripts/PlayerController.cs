@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void SwitchCharacter(int i){
-		Debug.Log (i);
 		if(cdFintimeStamp<= Time.time){
 			characters[currentPlayer].GetComponent<PlatformController>().setInactive();
 

@@ -19,6 +19,7 @@ public class Gliding : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		//If jumping and falling and holding jump
 		if(!controller.isGrounded() && rb2d.velocity.y<0 && (Input.GetButton("Jump")||CrossPlatformInputManager.GetButton("Jump"))){
 			//Gliding			

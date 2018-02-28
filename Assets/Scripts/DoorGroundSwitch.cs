@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class DoorGroundSwitch : MonoBehaviour {
 
-	public Sprite switchNotPressed;
-	public Sprite switchPressed;
-	private SpriteRenderer spriteRenderer;
+
+	public Transform doorPressed;
+	public Transform doorNotPressed;
+
+	public GameObject spriteRenderer;
 	private DoorController doorController;
+
+	private BoxCollider2D collider;
 
 	// Use this for initialization
 	void Start () {
-		spriteRenderer = GetComponent<SpriteRenderer> ();
-		spriteRenderer.sprite = switchNotPressed;
+		collider = GetComponent<BoxCollider2D> ();
 
 		doorController = GameObject.Find ("Door").GetComponent<DoorController> ();
 	}
@@ -25,7 +28,8 @@ public class DoorGroundSwitch : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Nalle"||other.gameObject.tag == "Poro"||other.gameObject.tag == "Slow") {
 			Debug.Log ("Open the door");
-			spriteRenderer.sprite = switchPressed;
+			collider.enabled = false;
+			spriteRenderer.transform.position = doorPressed.transform.position;
 			doorController.openDoor();
 		}
 	}
@@ -33,7 +37,8 @@ public class DoorGroundSwitch : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other){
 		if (other.gameObject.tag == "Nalle"||other.gameObject.tag == "Poro"||other.gameObject.tag == "Slow") {
 			Debug.Log ("Close the door");
-			spriteRenderer.sprite = switchNotPressed;
+			collider.enabled = true;
+			spriteRenderer.transform.position = doorNotPressed.transform.position;
 			doorController.closeDoor();
 		}
 	}
