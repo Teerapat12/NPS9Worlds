@@ -4,8 +4,8 @@
     <Files>
       <File FileName="Assets/Scripts/Gliding.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/NallePush.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Ledge.cs" Line="23" Column="1" />
-      <File FileName="Assets/SecondJump.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Ledge.cs" Line="1" Column="1" />
+      <File FileName="Assets/SecondJump.cs" Line="20" Column="3" />
       <File FileName="Assets/SpawnMagicBoxButton.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
