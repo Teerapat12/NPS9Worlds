@@ -57,6 +57,8 @@ public class GameController : MonoBehaviour {
 
 	public void onExit(){
 		Application.Quit ();
+//		fadeInOutPanel.GetComponent<Animator> ().Play ("PanelFadeOut");
+//		SceneManager.LoadScene("PreTutorialMenu");
 	}
 
 	public void enableCanvas(GameObject obj){
