@@ -16,7 +16,7 @@ public class SecondJump : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		onLedge = Physics2D.Linecast(transform.position, ledgeCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-		#if UNITY_STANDALONE || UNITY_WEBPLAYER  || UNITY_ANDROID //Comment here
+		#if UNITY_STANDALONE || UNITY_WEBPLAYER  //|| UNITY_ANDROID //Comment here
 
 		if (Input.GetButtonDown("Jump") && onLedge)
 		{

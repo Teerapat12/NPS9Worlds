@@ -410,11 +410,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.56, y: 3.24}
   m_EdgeRadius: 0
---- !u!1 &540001984 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1417949556408124, guid: d9c96c8af36ba4b9191861a89529985e,
-    type: 2}
-  m_PrefabInternal: {fileID: 544415738}
 --- !u!1001 &544415738
 Prefab:
   m_ObjectHideFlags: 0
@@ -512,32 +507,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114192376083117004, guid: d9c96c8af36ba4b9191861a89529985e,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1592098576}
-    - target: {fileID: 114202145723332848, guid: d9c96c8af36ba4b9191861a89529985e,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1592098576}
-    - target: {fileID: 114947036779657190, guid: d9c96c8af36ba4b9191861a89529985e,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 176628204}
-    - target: {fileID: 223333506523999640, guid: d9c96c8af36ba4b9191861a89529985e,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1852855767}
-    - target: {fileID: 114231688963698716, guid: d9c96c8af36ba4b9191861a89529985e,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 176628204}
-    - target: {fileID: 114299243015509450, guid: d9c96c8af36ba4b9191861a89529985e,
+    - target: {fileID: 114588547785718348, guid: d9c96c8af36ba4b9191861a89529985e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -547,16 +517,61 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1852855767}
-    - target: {fileID: 114346222118531922, guid: d9c96c8af36ba4b9191861a89529985e,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1592098576}
-    - target: {fileID: 114588547785718348, guid: d9c96c8af36ba4b9191861a89529985e,
+    - target: {fileID: 114299243015509450, guid: d9c96c8af36ba4b9191861a89529985e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 176628204}
+    - target: {fileID: 114231688963698716, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176628204}
+    - target: {fileID: 223333506523999640, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1852855767}
+    - target: {fileID: 114947036779657190, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176628204}
+    - target: {fileID: 114192376083117004, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1592098576}
+    - target: {fileID: 114012339668214614, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1592098576}
+    - target: {fileID: 114012339668214614, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchToNelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114080944507985208, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1592098576}
+    - target: {fileID: 114080944507985208, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchToPoro
+      objectReference: {fileID: 0}
+    - target: {fileID: 114192376083117004, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchToSlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 224219657893373810, guid: d9c96c8af36ba4b9191861a89529985e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 97.237915
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9c96c8af36ba4b9191861a89529985e, type: 2}
   m_IsPrefabParent: 0
@@ -1049,7 +1064,7 @@ Prefab:
         type: 2}
       propertyPath: fadeInOutPanel
       value: 
-      objectReference: {fileID: 540001984}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b460faf239b30473a912f6a21b1c0096, type: 2}
   m_IsPrefabParent: 0
@@ -1075,7 +1090,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 933457398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.98, y: 7.33, z: 0}
+  m_LocalPosition: {x: 36.98, y: 10.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1892319725}
@@ -1180,7 +1195,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1174294576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.47, y: -1.1, z: 0}
+  m_LocalPosition: {x: 15.47, y: -1.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1892319725}
@@ -1555,7 +1570,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.56
+  orthographic size: 4.7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

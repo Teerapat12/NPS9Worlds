@@ -1373,7 +1373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4408016573310066, guid: 5c732d1c18fd448dfa63fce15be07c90, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.24
+      value: -5.79
       objectReference: {fileID: 0}
     - target: {fileID: 4408016573310066, guid: 5c732d1c18fd448dfa63fce15be07c90, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1402,6 +1402,14 @@ Prefab:
     - target: {fileID: 1402604697313408, guid: 5c732d1c18fd448dfa63fce15be07c90, type: 2}
       propertyPath: m_Name
       value: Nalle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408016573310066, guid: 5c732d1c18fd448dfa63fce15be07c90, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408016573310066, guid: 5c732d1c18fd448dfa63fce15be07c90, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c732d1c18fd448dfa63fce15be07c90, type: 2}
@@ -2027,11 +2035,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4621532969664934, guid: a6c44eb10d3b54abbb606059f7bfff99, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.316
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 4621532969664934, guid: a6c44eb10d3b54abbb606059f7bfff99, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.079
+      value: -1.03
       objectReference: {fileID: 0}
     - target: {fileID: 4621532969664934, guid: a6c44eb10d3b54abbb606059f7bfff99, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2059,11 +2067,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4621532969664934, guid: a6c44eb10d3b54abbb606059f7bfff99, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.8891172
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4621532969664934, guid: a6c44eb10d3b54abbb606059f7bfff99, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.8653587
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4621532969664934, guid: a6c44eb10d3b54abbb606059f7bfff99, type: 2}
       propertyPath: m_LocalScale.z
@@ -3180,7 +3188,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.05
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
