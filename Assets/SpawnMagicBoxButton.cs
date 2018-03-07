@@ -21,7 +21,7 @@ public class SpawnMagicBoxButton : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll){
 
-		if (!spawned && coll.gameObject.name=="MagicBook") {
+		if (!spawned && coll.gameObject.name=="MagicBox") {
 			Debug.Log ("Box Appear!");
 			GameObject box = (GameObject)Instantiate (magicBoxPrefab, spawnPosition.position, spawnPosition.rotation);
 			spawned = true;

@@ -8,7 +8,9 @@ Assets/Scenes/Scene5.unity
 Assets/Scenes/Level1.unity
 Assets/Scenes/Level1Scene2.unity
 Assets/Scenes/Level1Scene3.unity
+Assets/Scenes/Level1Scene3half.unity
 Assets/Scenes/Level1Scene4.unity
+Assets/Scenes/Level1Scene4half.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -103,6 +105,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 6eb28624966f402d3f1e3f551d389394 Assembly-CSharp.dll:.GameController
+177d7d6ec4dfb7f7a8e268ca50615cd2 Assembly-CSharp.dll:.EnemyMovingScript
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
